@@ -1,5 +1,4 @@
-﻿using IngredientLib.Util;
-using KitchenData;
+﻿using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.References;
 using KitchenLib.Utils;
@@ -30,7 +29,14 @@ namespace NorwegianCuisine.Customs
         {
             KitchenPropertiesUtils.GetUnlimitedCItemProvider(GDOUtils.GetCustomGameDataObject<Lamb_Ribs>().GameDataObject.ID)
         };
-
+        public override void OnRegister(Appliance gdo)
+        {
+            Prefab.ApplyMaterialToChildren("raw", "Pork", "Raw Drumstick Bone");
+            Prefab.ApplyMaterialToChildren("locker_frame", "Metal- Shiny", "Metal Dark");
+            Prefab.ApplyMaterialToChildren("locker_wire", "Plastic - Red", "Plastic - Blue");
+            Prefab.ApplyMaterialToChildren("locker_door", "Metal- Shiny", "Door Glass");
+            Prefab.ApplyMaterialToChildren("locker_sliding_door", "Metal- Shiny", "Door Glass", "Metal Very Dark");
+        }
 
     }
 }
