@@ -11,7 +11,7 @@ namespace NorwegianCuisine.Customs
     public class Lamb_Ribs : CustomItem
     {
         public override string UniqueNameID => "Lamb_Ribs";
-        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("lamb_ribs_raw");
+        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("Lamb_Ribs_Raw");
         public override Appliance DedicatedProvider => (Appliance)GDOUtils.GetCustomGameDataObject<Lamb_Ribs_Provider>().GameDataObject;
         public override List<Item.ItemProcess> Processes => new List<Item.ItemProcess>
         {

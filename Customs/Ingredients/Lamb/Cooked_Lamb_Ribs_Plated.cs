@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace NorwegianCuisine.Customs
 {
-    class Cooked_Lamb_Ribs_Plated : CustomItemGroup
+    public class Cooked_Lamb_Ribs_Plated : CustomItemGroup
     {
         public override string UniqueNameID => "Cooked_Lamb_Ribs_Plated";
         public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("Cooked_Lamb_Ribs_Plated");

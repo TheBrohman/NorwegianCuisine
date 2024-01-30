@@ -1,4 +1,5 @@
-﻿using KitchenData;
+﻿using IngredientLib.Util;
+using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.References;
 using KitchenLib.Utils;
@@ -29,5 +30,7 @@ namespace NorwegianCuisine.Customs
         {
             KitchenPropertiesUtils.GetUnlimitedCItemProvider(GDOUtils.GetCustomGameDataObject<Lamb_Ribs>().GameDataObject.ID)
         };
+
+
     }
 }
