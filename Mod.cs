@@ -13,7 +13,7 @@ namespace KitchenNorwegianCuisine
     {
         public const string MOD_GUID = "com.thebrohman.norwegiancuisine";
         public const string MOD_NAME = "NorwegianCuisine";
-        public const string MOD_VERSION = "0.1.0";
+        public const string MOD_VERSION = "0.1.1";
         public const string MOD_AUTHOR = "TheBrohman";
         public const string MOD_GAMEVERSION = ">=1.1.4";
 

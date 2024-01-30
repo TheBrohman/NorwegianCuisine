@@ -24,5 +24,10 @@ namespace NorwegianCuisine.Customs
                 Result = (Item)GDOUtils.GetCustomGameDataObject<Cooked_Lamb_Ribs>().GameDataObject
             }
         };
+
+        public override void OnRegister(GameDataObject gameDataObject)
+        {
+            Prefab.ApplyMaterialToChildren("raw", "Pork", "Raw Drumstick Bone");
+        }
     }
 }

@@ -34,5 +34,11 @@ namespace NorwegianCuisine.Customs
         };
         public override ItemValue ItemValue => ItemValue.Large;
         public override string ColourBlindTag => "LR";
+
+        public override void OnRegister(GameDataObject gameDataObject)
+        {
+            Prefab.ApplyMaterialToChildren("cooked", "Porkchop", "Cooked Drumstick Bone");
+            Prefab.ApplyMaterialToChildren("circle", "Plate");
+        }
     }
 }
