@@ -21,7 +21,7 @@ public class AssetBundler
     /// </summary>
     private static readonly string BUNDLE_FILENAME = "mod.assets";
 
-    /// <summary>
+    /// <summary>k
     /// The output folder to place the completed bundle in.
     /// </summary>
     private static readonly string OUTPUT_FOLDER = "content";
