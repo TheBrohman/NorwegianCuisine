@@ -9,7 +9,7 @@ namespace NorwegianCuisine.Customs
     public class Cooked_Lamb_Ribs : CustomItem
     {
         public override string UniqueNameID => "Cooked_Lamb_Ribs";
-        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("Lamb_Ribs_Cooked");
+        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("Cooked_Lamb_Ribs");
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
 
         public override void OnRegister(GameDataObject gameDataObject)
