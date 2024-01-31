@@ -202,7 +202,7 @@ PublishScripts/
 # except Unity related
 !**/[Pp]ackages/packages-lock.json
 !**/[Pp]ackages/manifest.json
-scene.*
+UnityProject - KitchenNorwegianCuisine/
 
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
