@@ -38,7 +38,7 @@ namespace NorwegianCuisine.Customs
         public override void OnRegister(GameDataObject gameDataObject)
         {
             Prefab.ApplyMaterialToChildren("cooked", "Porkchop", "Cooked Drumstick Bone");
-            Prefab.ApplyMaterialToChildren("circle", "Plate");
+            Prefab.ApplyMaterialToChildren("plate", "Plate", "Plate - Ring");
         }
     }
 }
