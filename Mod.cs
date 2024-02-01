@@ -13,7 +13,7 @@ namespace KitchenNorwegianCuisine
     {
         public const string MOD_GUID = "com.thebrohman.norwegiancuisine";
         public const string MOD_NAME = "NorwegianCuisine";
-        public const string MOD_VERSION = "0.1.1";
+        public const string MOD_VERSION = "0.2.0";
         public const string MOD_AUTHOR = "TheBrohman";
         public const string MOD_GAMEVERSION = ">=1.1.4";
 
@@ -36,7 +36,8 @@ namespace KitchenNorwegianCuisine
             Bundle = Bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).FirstOrDefault() ?? throw new MissingAssetBundleException(MOD_GUID);
             AddGameDataObject<Lamb_Ribs_Provider>();
             AddGameDataObject<Lamb_Ribs>();
-            //AddGameDataObject<Lamb_Pot>();
+            AddGameDataObject<Lamb_Pot>();
+            AddGameDataObject<Cooked_Lamb_Pot>();
             AddGameDataObject<Cooked_Lamb_Ribs>();
             AddGameDataObject<Cooked_Lamb_Ribs_Plated>();
             AddGameDataObject<LambRibs_Dish>();

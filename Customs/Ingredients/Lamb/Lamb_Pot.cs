@@ -3,7 +3,10 @@ using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.References;
 using KitchenLib.Utils;
+using KitchenNorwegianCuisine;
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace NorwegianCuisine.Customs
 {
@@ -11,6 +14,7 @@ namespace NorwegianCuisine.Customs
     {
         public override string UniqueNameID => "Lamb_Pot";
         public override bool AutoCollapsing => false;
+        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("Lamb_Pot");
         public override Item DisposesTo => (Item)GDOUtils.GetExistingGDO(ItemReferences.Pot);
         public override List<Item.ItemProcess> Processes => new List<Item.ItemProcess>
         {
@@ -20,7 +24,7 @@ namespace NorwegianCuisine.Customs
                 IsBad = false,
                 Process = (Process)GDOUtils.GetExistingGDO(ProcessReferences.Cook),
                 RequiresWrapper = false,
-                Result = (Item)GDOUtils.GetCustomGameDataObject<Cooked_Lamb_Ribs>().GameDataObject
+                Result = (Item)GDOUtils.GetCustomGameDataObject<Cooked_Lamb_Pot>().GameDataObject
             }
         };
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()
@@ -43,20 +47,25 @@ namespace NorwegianCuisine.Customs
                 {
                     (Item)GDOUtils.GetCustomGameDataObject<Lamb_Ribs>().GameDataObject,
                     (Item)GDOUtils.GetExistingGDO(ItemReferences.Water)
-                }
+                },
+                IsMandatory = true
             }
         };
         public override void OnRegister(GameDataObject gameDataObject)
         {
             ItemGroup item = (ItemGroup)gameDataObject;
             ItemGroupView view = item.Prefab.GetComponent<ItemGroupView>();
+            GameObjectUtils.GetChildObject(item.Prefab, "Raw_Lamb_Ribs").ApplyMaterialToChildren("lamb", "Pork", "Drumstick Bone");
+            Prefab.ApplyMaterialToChildren("Handles", "Metal Dark");
+            Prefab.ApplyMaterialToChildren("Pot", "Metal- Shiny");
+            Prefab.ApplyMaterialToChildren("Water", "Water");
 
             view.ComponentGroups = new List<ItemGroupView.ComponentGroup>
             {
                 new ItemGroupView.ComponentGroup
                 {
                     Item = (Item)GDOUtils.GetCustomGameDataObject<Lamb_Ribs>().GameDataObject,
-                    GameObject = GameObjectUtils.GetChildObject(item.Prefab, "Lamb_Ribs"),
+                    GameObject = GameObjectUtils.GetChildObject(item.Prefab, "Raw_Lamb_Ribs"),
                     DrawAll = true
                 },
 
