@@ -31,6 +31,7 @@ namespace NorwegianCuisine.Customs
         };
         public override void OnRegister(Appliance gdo)
         {
+            GameObjectUtils.GetChildObject(Prefab, "Ice").ApplyMaterialToChildren("Ice", "Ice");
             Prefab.ApplyMaterialToChildren("raw", "Pork", "Raw Drumstick Bone");
             Prefab.ApplyMaterialToChildren("locker_frame", "Metal- Shiny", "Metal Dark");
             Prefab.ApplyMaterialToChildren("locker_wire", "Plastic - Red", "Plastic - Blue");
