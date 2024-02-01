@@ -33,7 +33,7 @@ namespace NorwegianCuisine.Customs
             }
         };
         public override ItemValue ItemValue => ItemValue.Large;
-        public override string ColourBlindTag => "LR";
+        public override string ColourBlindTag => "L";
 
         public override void OnRegister(GameDataObject gameDataObject)
         {
