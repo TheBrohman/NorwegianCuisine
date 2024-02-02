@@ -2,7 +2,6 @@
 using KitchenLib.Customs;
 using KitchenLib.Utils;
 using KitchenNorwegianCuisine;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace NorwegianCuisine.Customs
