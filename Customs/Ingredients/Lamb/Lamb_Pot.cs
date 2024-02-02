@@ -54,7 +54,7 @@ namespace NorwegianCuisine.Customs
         {
             ItemGroup item = (ItemGroup)gameDataObject;
             ItemGroupView view = item.Prefab.GetComponent<ItemGroupView>();
-            GameObjectUtils.GetChildObject(item.Prefab, "Raw_Lamb_Ribs").ApplyMaterialToChildren("lamb", "Pork", "Drumstick Bone");
+            GameObjectUtils.GetChildObject(item.Prefab, "Raw_Lamb_Ribs").ApplyMaterialToChildren("lamb", "Pork", "Raw Drumstick Bone");
             Prefab.ApplyMaterialToChildren("Handles", "Metal Dark");
             Prefab.ApplyMaterialToChildren("Pot", "Metal- Shiny");
             Prefab.ApplyMaterialToChildren("Water", "Water");
